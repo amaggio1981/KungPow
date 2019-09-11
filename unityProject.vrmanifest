@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.kungpowvr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Github\\Kung Pow VR\\actions.json",
+      "action_manifest_path": "D:\\Github\\KungPow\\actions.json",
       "strings": {
         "en_us": {
           "name": "Kung Pow VR [Testing]"
