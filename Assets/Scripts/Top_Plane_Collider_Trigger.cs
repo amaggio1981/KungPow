@@ -6,26 +6,25 @@ using UnityEngine.SceneManagement;
 public class Top_Plane_Collider_Trigger : MonoBehaviour
 {
     // Use this for initialization
-    void Start()
-    {
+    //void Start()
+    //{
 
         // add isTrigger
-        BoxCollider boxCollider = GetComponent<BoxCollider>();
-        boxCollider.isTrigger = true;
+     //   BoxCollider boxCollider = GetComponent<BoxCollider>();
+       // boxCollider.isTrigger = true;
 
-    }
+   // }
 
     // Update is called once per frame
-    void Update()
-    {
-    }
+   // void Update()
+    //{
+    //}
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(0);
+        Debug.Log("Trigger");
+        SceneManager.LoadScene(1);
 
-        }
+       
     }
 }
