@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Kill_Scene_Head_Collider_Trigger : MonoBehaviour
+public class Kill_Scene_Collider_Trigger : MonoBehaviour
 {
 
 
@@ -23,11 +23,11 @@ public class Kill_Scene_Head_Collider_Trigger : MonoBehaviour
     {
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
 
         }
     }
