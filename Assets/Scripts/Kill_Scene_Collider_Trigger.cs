@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class Kill_Scene_Collider_Trigger : MonoBehaviour
 {
 
-
+    private ScoreManager theScoreManager;
 
     // Use this for initialization
     void Start()
     {
+
+        theScoreManager = FindObjectOfType<ScoreManager>();
 
         // add isTrigger
      //   BoxCollider boxCollider = GetComponent<BoxCollider>();
@@ -27,7 +29,8 @@ public class Kill_Scene_Collider_Trigger : MonoBehaviour
     {
         
         {
-            SceneManager.LoadScene(0);
+                    theScoreManager.scoreIncreasing = true;
+                    SceneManager.LoadScene(0);
 
         }
     }
