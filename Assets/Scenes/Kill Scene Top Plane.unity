@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 55316584}
   - component: {fileID: 55316588}
   - component: {fileID: 55316587}
-  - component: {fileID: 55316589}
   m_Layer: 0
   m_Name: Text Plane 4
   m_TagString: Untagged
@@ -230,17 +229,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1.4233059e-13, z: 10.000002}
   m_Center: {x: -0.00000023841858, y: 0, z: 0}
---- !u!114 &55316589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 55316582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3dac1c805f3edc41b243e78782aa15e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &280458874
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +326,7 @@ GameObject:
   - component: {fileID: 377809742}
   - component: {fileID: 377809741}
   - component: {fileID: 377809740}
+  - component: {fileID: 377809743}
   m_Layer: 0
   m_Name: Text 4
   m_TagString: Untagged
@@ -423,38 +412,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377809743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 377809739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3dac1c805f3edc41b243e78782aa15e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &781815313 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 159396, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
   m_PrefabInternal: {fileID: 934563553}
---- !u!65 &781815314
-BoxCollider:
+--- !u!135 &781815314
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 781815313}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &922239501 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 2}
   m_PrefabInternal: {fileID: 934563553}
---- !u!65 &922239502
-BoxCollider:
+--- !u!135 &922239502
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 922239501}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &934563553
 Prefab:
@@ -498,15 +498,15 @@ Prefab:
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1620388905}
+      objectReference: {fileID: 1711289939}
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1284920239}
+      objectReference: {fileID: 1217621919}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1284920239
+--- !u!21 &1217621919
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -543,17 +543,17 @@ Material:
 GameObject:
   m_PrefabParentObject: {fileID: 124034, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
   m_PrefabInternal: {fileID: 934563553}
---- !u!65 &1302922726
-BoxCollider:
+--- !u!135 &1302922726
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302922725}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1565388557
 GameObject:
@@ -620,7 +620,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!43 &1620388905
+--- !u!43 &1711289939
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
