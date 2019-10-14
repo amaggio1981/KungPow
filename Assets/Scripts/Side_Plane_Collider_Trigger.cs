@@ -5,23 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Side_Plane_Collider_Trigger : MonoBehaviour
 {
-    // Use this for initialization
-    //void Start()
-    //{
 
-        // add isTrigger
-     //   BoxCollider boxCollider = GetComponent<BoxCollider>();
-       // boxCollider.isTrigger = true;
 
-   // }
+    private ScoreManager theScoreManager;
 
-    // Update is called once per frame
-   // void Update()
-    //{
-    //}
+    void Start()
+    {
+
+        theScoreManager = FindObjectOfType<ScoreManager>();
+
+        
+    }
 
     void OnTriggerEnter(Collider other)
     {
+
+        theScoreManager.scoreIncreasing = false;
         Debug.Log("Trigger");
         SceneManager.LoadScene(2);
 

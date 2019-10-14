@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Kill_Scene_Collider_Trigger : MonoBehaviour
 {
 
-    private ScoreManager theScoreManager;
+    public ScoreManager theScoreManager;
 
     // Use this for initialization
     void Start()
@@ -30,6 +30,7 @@ public class Kill_Scene_Collider_Trigger : MonoBehaviour
     {
         
         {
+                    Debug.Log("trigger");
                     theScoreManager.scoreIncreasing = true;
                     SceneManager.LoadScene(0);
 
