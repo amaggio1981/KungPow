@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class Kill_Scene_Collider_Trigger : MonoBehaviour
 {
 
-    public ScoreManager theScoreManager;
+    public Score_Manager theScoreManager;
 
     // Use this for initialization
     void Start()
     {
 
-        theScoreManager = FindObjectOfType<ScoreManager>();
+        theScoreManager = FindObjectOfType<Score_Manager>();
 
         // add isTrigger
      //   BoxCollider boxCollider = GetComponent<BoxCollider>();

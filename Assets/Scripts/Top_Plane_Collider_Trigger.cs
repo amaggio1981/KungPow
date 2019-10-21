@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Top_Plane_Collider_Trigger : MonoBehaviour
 {
 
+    public Score_Manager theScoreManager;
 
-    private ScoreManager theScoreManager;
+
 
     // Use this for initialization
-   void Start()
+    void Start()
     {
 
-        theScoreManager = FindObjectOfType<ScoreManager>();
+        theScoreManager = FindObjectOfType<Score_Manager>();
+
+       
 
         // add isTrigger
         //   BoxCollider boxCollider = GetComponent<BoxCollider>();
@@ -28,10 +32,13 @@ public class Top_Plane_Collider_Trigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
+      
         theScoreManager.scoreIncreasing = false;
         Debug.Log("Trigger");
+        Debug.Log(theScoreManager.scoreCount);
         SceneManager.LoadScene(1);
+
+
 
        
     }

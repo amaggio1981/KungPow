@@ -7,12 +7,12 @@ public class Side_Plane_Collider_Trigger : MonoBehaviour
 {
 
 
-    private ScoreManager theScoreManager;
+    private Score_Manager theScoreManager;
 
     void Start()
     {
 
-        theScoreManager = FindObjectOfType<ScoreManager>();
+        theScoreManager = FindObjectOfType<Score_Manager>();
 
         
     }
